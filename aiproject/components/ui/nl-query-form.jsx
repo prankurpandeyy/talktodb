@@ -7,13 +7,13 @@ import { Tabledata } from "./Tabledata";
 function NLQueryForm() {
   const [nlQuery, setNlQuery] = useState("");
   const [data, setData] = useState([]);
-  console.log("🚀 ~ NLQueryForm ~ data:", data);
+  
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
 
   const API_KEY = process.env.NEXT_PUBLIC_RESTDB_API_KEY;
   const BASE_URL = process.env.NEXT_PUBLIC_RESTDB_BASE_URL;
-  console.table({ API_KEY, BASE_URL });
+ 
   useEffect(() => {
     async function fetchData() {
       if (!API_KEY || !BASE_URL) {
